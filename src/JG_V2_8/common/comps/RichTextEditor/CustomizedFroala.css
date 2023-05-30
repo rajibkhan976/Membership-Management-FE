@@ -1,0 +1,8 @@
+.jg-froala .fr-toolbar, .jg-froala .fr-second-toolbar {
+    border: none;
+}
+.fr-box.fr-basic.jg-froala .fr-wrapper{
+   border-left: none;
+    border-right: none;
+}
+

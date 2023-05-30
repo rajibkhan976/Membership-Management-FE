@@ -1,0 +1,242 @@
+/**
+* FlickClock CSS 
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans+Mono');
+* {
+  box-sizing: border-box;
+}
+
+.clock-title {
+  margin-top: 5px;
+  text-align: center;
+  color: #607d8b;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: inherit;
+}
+
+.CountDownTimer {
+  display: flex;
+  justify-content: space-between;
+  width: 338px;
+  padding-bottom: 25px;
+}
+
+.flipUnitContainer {
+  display: block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+  perspective-origin: 50% 50%;
+  perspective: 300px;
+  background-color: #4caf4f;
+  border-radius: 2px;
+  box-shadow: none;
+}
+
+.upperCard,
+.lowerCard {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  border: none;
+}
+
+.upperCard span,
+.lowerCard span {
+  font-size: 30px;
+  font-family: 'Droid Sans Mono', monospace;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.upperCard {
+  align-items: flex-end;
+  border-bottom: 1px solid #263238;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.upperCard span {
+  transform: translateY(50%);
+  font-family: inherit;
+}
+
+.upperCard:before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 4px;
+  background-color: #263238;
+  z-index: 1;
+  right: 0;
+  bottom: 0px;
+}
+
+.upperCard:after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 4px;
+  background-color: #263238;
+  z-index: 1;
+  left: 0;
+  bottom: 0px;
+}
+
+.lowerCard {
+  align-items: flex-start;
+  border-top: 1px solid #263238;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.lowerCard span {
+  transform: translateY(-50%);
+  font-family: inherit;
+}
+
+.flipCard {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flipCard span {
+  /* font-family: "Droid Sans Mono", monospace; */
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+  font-family: inherit;
+}
+
+.flipCard.unfold {
+  top: 50%;
+  align-items: flex-start;
+  transform-origin: 50% 0%;
+  transform: rotateX(180deg);
+  background-color: #4caf4f;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  /*border: 0.5px solid whitesmoke;*/
+  border-top: 2px solid #263238;
+}
+
+.flipCard.unfold span {
+  transform: translateY(-50%);
+}
+
+.flipCard.unfold:before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 4px;
+  background-color: #263238;
+  z-index: 1;
+  right: 0;
+  top: 0px;
+}
+
+.flipCard.unfold:after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 4px;
+  background-color: #263238;
+  z-index: 1;
+  left: 0;
+  top: 0px;
+}
+
+.flipCard.fold {
+  top: 0%;
+  align-items: flex-end;
+  transform-origin: 50% 100%;
+  transform: rotateX(0deg);
+  background-color: #4caf4f;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  /* border: 0.5px solid whitesmoke;
+  border-bottom: 0.5px solid whitesmoke; */
+  border-bottom: 1px solid #263238;
+}
+.flipCard.fold span {
+  transform: translateY(50%);
+}
+
+.fold {
+  -webkit-animation: fold 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s 1 normal forwards;
+  animation: fold 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s 1 normal forwards;
+  transform-style: preserve-3d;
+}
+
+.unfold {
+  -webkit-animation: unfold 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s 1 normal forwards;
+  animation: unfold 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s 1 normal forwards;
+  transform-style: preserve-3d;
+}
+
+@-webkit-keyframes fold {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(-180deg);
+  }
+}
+
+@keyframes fold {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(-180deg);
+  }
+}
+@-webkit-keyframes unfold {
+  0% {
+    transform: rotateX(180deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+@keyframes unfold {
+  0% {
+    transform: rotateX(180deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+@media (max-width: 767px) {
+  .flipUnitContainer {
+    width: 48px;
+    height: 48px;
+  }
+  .CountDownTimer {
+    width: 240px;
+  }
+  .upperCard span,
+  .lowerCard span {
+    font-size: 24px !important;
+    line-height: 30px;
+  }
+  .flipCard span {
+    font-size: 24px !important;
+    line-height: 30px;
+  }
+}

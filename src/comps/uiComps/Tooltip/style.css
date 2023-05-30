@@ -1,0 +1,52 @@
+.tooltip {
+  position: relative;
+}
+
+.tooltip:hover::before {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip::before {
+  text-align: center;
+  content: attr(data-tool-tip);
+  visibility: hidden;
+  opacity: 0;
+  min-width: 100%;
+  width: max-content;
+  height: max-content;
+  position: absolute;
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+  padding: 4px 8px;
+  background-color: #5a5a5a;
+  color: white;
+  border-radius: 4px;    
+  font-size: 0.8em;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: opacity ease-out 150ms, bottom ease-out 150ms;
+}
+
+.tooltip[data-position=top]::before {
+  bottom: 125%;
+}
+
+.tooltip[data-position=right]::before {
+  left: 125%;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+
+.tooltip[data-position=bottom]::before {
+  top: 125%;
+}
+
+.tooltip[data-position=left]::before {
+  right: 125%;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}

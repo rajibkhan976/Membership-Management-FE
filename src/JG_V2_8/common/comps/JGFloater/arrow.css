@@ -1,0 +1,34 @@
+#jg-arrow,
+#jg-arrow::before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: inherit;
+  z-index: -1;
+}
+
+#jg-arrow {
+  visibility: hidden;
+}
+
+#jg-arrow::before {
+  visibility: visible;
+  content: '';
+  transform: rotate(45deg);
+}
+
+#jg-tooltip[data-popper-placement^='top'] > #jg-arrow {
+  bottom: -4px;
+}
+
+#jg-tooltip[data-popper-placement^='bottom'] > #jg-arrow {
+  top: -4px;
+}
+
+#jg-tooltip[data-popper-placement^='left'] > #jg-arrow {
+  right: -4px;
+}
+
+#jg-tooltip[data-popper-placement^='right'] > #jg-arrow {
+  left: -4px;
+}

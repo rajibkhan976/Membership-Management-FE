@@ -1,0 +1,48 @@
+export enum FieldType {
+  SELECT = 'select',
+  MEMBERSHIP_PAYMENT_SELECT = 'membership payment select',
+  SELECT_MULTIPLE_EVENT_CATEGORY = 'event category multiselect',
+  SELECT_MULTIPLE = 'multiselect',
+  AGG_MULTISELECT = 'agg_multiselect',
+  JSON_MULTISELECT = 'json_multiselect',
+  TEXT = 'text',
+  TEXT_SMALL = 'smallText',
+  TEXT_MEDIUM = 'mediumText',
+  TEXT_LARGE = 'largeText',
+  CHECKBOX = 'checkbox',
+  RADIO = 'radio',
+  DATE = 'date',
+  MONTH_AND_DAY_IS = 'month and day is',
+  DATE_BETWEEN = 'date between',
+  BETWEEN = 'between',
+  INT_FIELD = 'int',
+  INT_BETWEEN = 'intBetween',
+  DECIMAL = 'decimal',
+  DECIMAL_BETWEEN = 'decimalBetween',
+  CURRENCY = 'currency',
+  CURRENCY_BETWEEN = 'currencyBetween',
+  TEXTAREA = 'textarea',
+  FILE = 'file',
+}
+
+export enum AllMethods {
+  RECIPIENTS_BY_SEGMENT = 'RecipientsBySegment',
+  SEGMENTS_BY_CLUB_ID = 'GetSegmentsByUserIdAndClubId',
+  GET_SEGMENT_BY_ID = 'GetSegmentById',
+  EMAIL_RECIPIENT_BY_ACTIVITY_TYPE = 'EmailRecipientByActivityType',
+  GET_META_DATA_FOR_SEGMENT = 'GetMetadataForSegment',
+  SELECT_OPTINE_MASTER_BY_OWNER = 'SelectOptInMasterByOwner',
+  SELECT_TIME_ZONES = 'SelectTimezones',
+  EMAIL_HISTORY = 'EmailHistory',
+  GET_EMAIL_BY_HISTORY_ID = 'GetEmailByHistoryId',
+  GET_RECIPIENT_ACTIVITY_LOG = 'GetRecipientActivityLog',
+}
+
+export enum ActivityType {
+  ALL = 0,
+  DELIVERY = 1,
+  OPEN = 2,
+  CLICK = 3,
+  BOUNCED = 4,
+  DROPPED = 5,
+}
