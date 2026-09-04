@@ -65,7 +65,7 @@
   },
   "scripts": {
     "start": "cross-env TAILWIND_MODE=watch craco start",
-    "build": "cross-env GENERATE_SOURCEMAP=false craco build",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider GENERATE_SOURCEMAP=false craco build",
     "test": "craco test",
     "lint": "eslint src --ext .ts,.tsx --cache --cache-strategy content && tsc --noEmit",
     "lint:fix": "eslint src --ext .ts,.tsx --fix",
