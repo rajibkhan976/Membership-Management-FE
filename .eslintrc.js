@@ -22,7 +22,7 @@ module.exports = {
   },
   plugins: ['react', 'import', '@typescript-eslint', 'prettier', 'react-hooks'],
   rules: {
-    'linebreak-style': ['error', 'windows'],
+    'linebreak-style': "off",
     semi: ['error', 'never'],
     'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/no-empty-function': 0,
