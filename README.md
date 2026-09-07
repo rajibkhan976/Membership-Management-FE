@@ -1,6 +1,6 @@
 # Demo
 
-Visit this url [https://membership-management-fe.netlify.app/?path=/story/misc-footer--basic]
+Visit this url https://membership-management-fe.netlify.app/?path=/story/misc-footer--basic
 
 # Getting Started with this project
 
