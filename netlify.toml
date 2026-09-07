@@ -1,4 +1,4 @@
 [build]
+  NODE_VERSION = "16"
   command = "npm run build-storybook"
   publish = "storybook-static"
-  NODE_OPTIONS = "--openssl-legacy-provider"
