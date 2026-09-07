@@ -1,3 +1,7 @@
+# Demo
+
+Visit this url [https://membership-management-fe.netlify.app/?path=/story/misc-footer--basic]
+
 # Getting Started with this project
 
 This is an small part of our whole web apps built using create react app and uses react-router for navigation. After finishing the development we build it running `yarn build`. Then, we blend our build code with dot net code. Our aim is to transfer as much feature as possible to Reactjs from previous legacy javascript.
