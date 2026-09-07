@@ -71,7 +71,7 @@
     "lint:fix": "eslint src --ext .ts,.tsx --fix",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
+    "build-storybook": "build-storybook",
     "build:tailwind": "postcss src/index.css -o src/css/tailwind.css",
     "prettier-format": "prettier --config .prettierrc \"src/**/*.{js,ts,jsx,tsx}\" --write",
     "prepare": "husky install .husky"
